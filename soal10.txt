@@ -1,0 +1,47 @@
+<?php  
+ $sumber = 'http://json_data';
+ $konten = file_get_contents($sumber);
+ $data = json_decode($konten, true);
+
+
+ echo "<h1 align='center'>Orang yang berusia di bawah 21 tahun".count($data)."</h1>";
+ echo "<br/>";
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Menampilkan data json</title>
+ <style>
+  table {
+   width: 100%; 
+  }
+  table tr td {
+   padding: 1rem;
+  }
+ </style>
+</head>
+<body>
+ <table border="1">
+  <tr>
+   <th>No</th>
+   <th>Nama</th>
+   <th>Usia</th>
+   <th>ID</th> 
+  </tr>
+  <?php   
+   for($a=0; $a < count($data); $a++)
+   {
+    print "<tr>";
+    
+    print "<td>".$a."</td>";
+    // menayangkan 
+    print "<td>".$data[$a]['nama']."</td>";
+    print "<td>".$data[$a]['usia']."</td>";
+    print "<td>".$data[$a]['id']."</td>";
+    print "</tr>";
+   }
+  ?>
+ </table>
+</body>
+</html>
