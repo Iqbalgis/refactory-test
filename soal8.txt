@@ -1,0 +1,19 @@
+#include <iostream>
+int main(){
+
+	using namespace std;
+	int sum = 0, i, n;
+
+	for(i = 0; i < 10; i++){
+
+		cout << "Masukan angka" << endl;
+		cin >> n;
+
+		sum = sum + n;
+
+	}
+	cout << "Jumlah " << sum << endl;
+
+	return 0;
+
+}

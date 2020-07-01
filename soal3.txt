@@ -1,0 +1,65 @@
+#include <stdio.h>
+
+int maks_min_rata ()
+{
+ int i,x; 
+ float rata, bil, min=999999, maks=0, jumlah=0;
+ printf("--Menghitung nilai maksimum, minimum, dan rata-rata-- \n\n");
+ printf("Masukkan banyaknya bilangan : ");
+ scanf("%d", &x);
+   
+  for(i=1;i<=x;i++)
+  {
+   printf("\nMasukkan Bilangan Ke-%d = ", i);
+   scanf("%f",&bil);
+    
+    if (bil > maks) 
+    {
+     maks = bil;
+    }
+   
+    if (bil < min) 
+    {
+     min = bil;
+    }
+    jumlah += bil;
+    rata=jumlah/i;
+  }
+  printf("Nilai Maksimum : %.2f\n", maks);
+  printf("Nilai Minimum : %.2f\n", min);
+  printf("Rata-rata nilai : %.2f\n",rata); 
+  system("pause");
+}
+
+int main()
+{
+ int menu;
+ while(menu!=2)
+ {
+   printf("--Pilihan menu--\n");
+   printf("1. Menghitung nilai rata-rata,  maksimum dan minimum \n" );
+   printf("2. Exit \n");
+   printf("Anda memilih menu : ");
+   scanf("%d", &menu);
+   system("cls");
+ 
+  if (menu==1)
+  {
+   maks_min_rata();
+  }
+ 
+  if (menu==2)
+  {
+   printf("--okay-- \n\n");
+  }
+  
+  else
+  {
+   system("cls");
+  }
+ 
+ } 
+ 
+ system("PAUSE");
+ return 0;
+}

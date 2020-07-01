@@ -1,0 +1,55 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+  
+ 
+long rekursif(int f)
+ 
+{
+ 
+    if (f == 0)
+ 
+        return 1;
+ 
+    else
+ 
+        return f * rekursif(f - 1);
+ 
+}
+ 
+  
+ 
+int main()
+ 
+{
+ 
+    int x;
+ 
+    int n = 4;
+ 
+    cout << n << "! = "
+ 
+         << rekursif(n) << endl;
+ 
+  
+ 
+    n = 9;
+ 
+    cout << n << "! = "
+ 
+         << rekursif(n) << endl;
+ 
+  
+ 
+    cout<<"Masukan Angka : ";
+ 
+    cin>>x;
+ 
+    cout << x <<"! = " << rekursif(x) <<endl;
+ 
+  
+ 
+    return 0;
+ 
+}
